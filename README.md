@@ -2,7 +2,7 @@
 
 Personal portfolio website for Ferdinand Ismael, Front End Engineer based in Toronto, Ontario.
 
-**Live site:** coming soon
+**Live site:** [ferdinandismael.dev](https://ferdinandismael.dev)
 
 ---
 
