@@ -1,0 +1,131 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 48px 120px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(61,255,195,0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 40px;
+}
+
+.name {
+  font-family: var(--font-syne);
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.name em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.summary {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  margin-bottom: 48px;
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: #0C0C0C;
+}
+.btnPrimary:hover { background: #fff; }
+
+.btnGhost {
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.btnGhost:hover { border-color: var(--text); color: var(--text); }
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.socialLink:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.scroll {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 40px;
+  height: 1px;
+  background: var(--border);
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 100px 24px 80px; }
+  .tag { margin-bottom: 28px; }
+  .name { margin-bottom: 24px; }
+  .summary { font-size: 1rem; margin-bottom: 36px; max-width: 100%; }
+  .btnPrimary, .btnGhost { width: 100%; justify-content: center; padding: 16px 24px; }
+  .scroll { margin-top: 48px; }
+}
