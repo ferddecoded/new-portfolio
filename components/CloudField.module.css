@@ -1,0 +1,73 @@
+.container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  left: -280px;
+  width: 200px;
+  height: 60px;
+  animation: drift linear infinite;
+  will-change: transform;
+}
+
+.cloudReverse {
+  left: auto;
+  right: -280px;
+  animation-name: driftReverse;
+}
+
+.cloudMain {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 160px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(180, 210, 240, 0.3);
+}
+
+.cloudBubbleLeft {
+  position: absolute;
+  bottom: 28px;
+  left: 20px;
+  width: 70px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 50%;
+}
+
+.cloudBubbleRight {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  width: 90px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+}
+
+.cloudBubbleTop {
+  position: absolute;
+  bottom: 40px;
+  left: 120px;
+  width: 55px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+}
+
+@keyframes drift {
+  0%   { transform: translateX(0) scale(var(--scale, 1)); }
+  100% { transform: translateX(calc(100vw + 400px)) scale(var(--scale, 1)); }
+}
+
+@keyframes driftReverse {
+  0%   { transform: translateX(0) scale(var(--scale, 1)); }
+  100% { transform: translateX(calc(-100vw - 400px)) scale(var(--scale, 1)); }
+}

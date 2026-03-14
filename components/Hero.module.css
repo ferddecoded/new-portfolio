@@ -1,12 +1,21 @@
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 80px 48px 120px;
+  background: linear-gradient(to bottom, #080D1A 60%, #0C0C0C 100%);
+  overflow: hidden;
+}
+
+:global([data-theme="light"]) .hero {
+  background: linear-gradient(to bottom, #B8D9F5 0%, #DCF0FF 50%, #F5F2EE 100%);
 }
 
 .inner {
+  position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
@@ -23,6 +32,11 @@
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 40px;
+}
+
+:global([data-theme="light"]) .tag {
+  border-color: var(--accent);
+  border-width: 1.5px;
 }
 
 .name {

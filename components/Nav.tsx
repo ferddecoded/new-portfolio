@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Nav.module.css";
@@ -32,8 +31,15 @@ export default function Nav() {
   return (
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-        <Link href="/" className={styles.logo}>
-          <Image src="/logo.svg" alt="Ferdinand Ismael" width={36} height={36} />
+        <Link href="/" className={styles.logo} aria-label="Ferdinand Ismael">
+          <svg viewBox="0 0 80 80" fill="none" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 12 L7 12 L7 68 L16 68" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M64 12 L73 12 L73 68 L64 68" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M27 22 L43 22 M27 22 L27 58 M27 40 L41 40" className={styles.logoLetters} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M51 22 L51 58" className={styles.logoLetters} strokeWidth="3" strokeLinecap="round"/>
+            <path d="M47 22 L55 22" className={styles.logoLetters} strokeWidth="3" strokeLinecap="round"/>
+            <path d="M47 58 L55 58" className={styles.logoLetters} strokeWidth="3" strokeLinecap="round"/>
+          </svg>
         </Link>
 
         {/* Desktop links */}

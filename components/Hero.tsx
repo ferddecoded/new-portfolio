@@ -1,8 +1,12 @@
 import styles from "./Hero.module.css";
+import StarField from "./StarField";
+import CloudField from "./CloudField";
 
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
+      <StarField />
+      <CloudField />
       <div className={styles.inner}>
         <span className={styles.tag}>Available for new opportunities</span>
         <h1 className={styles.name}>

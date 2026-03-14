@@ -38,6 +38,15 @@
   transition: color 0.2s;
 }
 .links a:hover { color: var(--text); }
+
+:global([data-theme="light"]) .nav {
+  background: rgba(245, 242, 238, 0.85);
+}
+:global([data-theme="light"]) .links a { color: #6B6762; }
+:global([data-theme="light"]) .links a:hover { color: #3D3A37; }
+:global([data-theme="light"]) .hamburger span { background: #3D3A37; }
+.logoLetters { stroke: #F0EDE8; }
+:global([data-theme="light"]) .logoLetters { stroke: #0C0C0C; }
 .active { color: var(--accent) !important; }
 
 .actions {
