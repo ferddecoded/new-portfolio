@@ -21,19 +21,22 @@ A modern, accessible portfolio to showcase my experience, skills, and background
 | Styling | CSS Modules |
 | Fonts | [Syne](https://fonts.google.com/specimen/Syne) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via `next/font` |
 | Icons | Inline SVG |
-| Hosting | Vercel (coming soon) |
+| Formatting | Prettier |
+| Hosting | Vercel |
 
 ---
 
 ## Features
 
 - Dark / light mode toggle with `localStorage` persistence
+- Animated star field (dark mode) and drifting cloud field (light mode) in hero
 - Fully responsive — mobile, tablet, and desktop
 - WCAG accessible — semantic HTML, ARIA labels, sufficient colour contrast
 - Hamburger nav with animated full-screen drawer on mobile
 - Resume PDF download
 - `/projects` route ready for future case studies
 - Optimised images via `next/image`
+- Below-fold sections lazy-loaded via `next/dynamic` for faster initial load
 
 ---
 
@@ -50,6 +53,8 @@ app/
 components/
 ├── Nav.tsx              # Fixed nav with hamburger + theme toggle
 ├── Hero.tsx             # Hero section with CTA + social links
+├── StarField.tsx        # Animated star background (dark mode)
+├── CloudField.tsx       # Drifting cloud background (light mode)
 ├── About.tsx            # About section with photo + bio
 ├── Skills.tsx           # Skills grouped by category
 ├── Experience.tsx       # Work history
@@ -59,7 +64,6 @@ components/
 └── ThemeToggle.tsx      # Dark / light mode toggle
 
 public/
-├── logo.svg             # FI monogram logo
 ├── ferdinand.jpeg       # Profile photo
 └── FerdinandIsmaelResume.pdf
 ```
