@@ -67,7 +67,10 @@ export default function Experience() {
   return (
     <section id="experience" className={styles.section}>
       <p className={styles.label}>Experience</p>
-      <h2 className={styles.heading}>Where I&apos;ve worked.</h2>
+      <h2 className={styles.heading}>
+        Where I&apos;ve<br />
+        <em>worked.</em>
+      </h2>
       <div className={styles.list}>
         {jobs.map((job) => (
           <div key={job.company} className={styles.item}>

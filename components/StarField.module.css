@@ -4,12 +4,13 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  opacity: 0.5;
 }
 
 .star {
   position: absolute;
   border-radius: 50%;
-  background: #3DFFC3;
+  background: rgba(200, 240, 78, 1);
   animation: twinkle var(--duration, 4s) ease-in-out infinite alternate;
   transform: translateZ(0);
 }

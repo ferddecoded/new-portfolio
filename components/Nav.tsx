@@ -57,6 +57,7 @@ export default function Nav() {
         </ul>
 
         <div className={styles.actions}>
+          <a href="#contact" className={styles.ctaPill}>Available — Let&apos;s talk</a>
           <ThemeToggle />
 
           {/* Hamburger */}

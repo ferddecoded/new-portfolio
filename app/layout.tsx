@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans } from "next/font/google";
+import { Instrument_Serif, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
-  variable: "--font-syne",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400"],
+  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
@@ -28,7 +29,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </head>
-      <body className={`${syne.variable} ${dmSans.variable}`}>{children}</body>
+      <body className={`${instrumentSerif.variable} ${dmSans.variable}`}>{children}</body>
     </html>
   );
 }

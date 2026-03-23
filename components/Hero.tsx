@@ -5,10 +5,15 @@ import CloudField from "./CloudField";
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
+      <div className={styles.gridBg} aria-hidden="true" />
+      <div className={styles.glow} aria-hidden="true" />
       <StarField />
       <CloudField />
       <div className={styles.inner}>
-        <span className={styles.tag}>Available for new opportunities</span>
+        <span className={styles.tag}>
+          <span className={styles.dot} aria-hidden="true" />
+          Available for new opportunities
+        </span>
         <h1 className={styles.name}>
           Ferdinand<br />
           <em>Ismael</em>
