@@ -19,7 +19,7 @@ A modern, accessible portfolio to showcase my experience, skills, and background
 | Framework | [Next.js 16](https://nextjs.org/) (App Router) |
 | Language | TypeScript |
 | Styling | CSS Modules |
-| Fonts | [Syne](https://fonts.google.com/specimen/Syne) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via `next/font` |
+| Fonts | [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via `next/font` |
 | Icons | Inline SVG |
 | Formatting | Prettier |
 | Hosting | Vercel |
@@ -30,9 +30,15 @@ A modern, accessible portfolio to showcase my experience, skills, and background
 
 - Dark / light mode toggle with `localStorage` persistence
 - Animated star field (dark mode) and drifting cloud field (light mode) in hero
+- Hero with CSS grid-line background, acid-green radial glow, pulsing availability dot, and staggered fade-up entrance animations
+- Instrument Serif display headings with stroke italic treatment on the hero name
 - Fully responsive — mobile, tablet, and desktop
 - WCAG accessible — semantic HTML, ARIA labels, sufficient colour contrast
-- Hamburger nav with animated full-screen drawer on mobile
+- Hamburger nav with animated full-screen drawer on mobile; accent pill CTA in desktop nav
+- Two-column About layout with profile photo and contact row
+- Three-column bordered skills triptych with accent-tinted core tags
+- Editorial experience layout with → arrow bullets and pill-shaped tech stack tags
+- Two-column contact section with card links and "available now" callout card
 - Resume PDF download
 - `/projects` route ready for future case studies
 - Optimised images via `next/image`
@@ -55,11 +61,11 @@ components/
 ├── Hero.tsx             # Hero section with CTA + social links
 ├── StarField.tsx        # Animated star background (dark mode)
 ├── CloudField.tsx       # Drifting cloud background (light mode)
-├── About.tsx            # About section with photo + bio
+├── About.tsx            # About section — photo, bio, contact row
 ├── Skills.tsx           # Skills grouped by category
 ├── Experience.tsx       # Work history
 ├── Education.tsx        # Education history
-├── Contact.tsx          # Contact section
+├── Contact.tsx          # Contact section — card links + available callout
 ├── Footer.tsx           # Footer
 └── ThemeToggle.tsx      # Dark / light mode toggle
 
