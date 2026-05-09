@@ -14,11 +14,19 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 80px 80px;
-  -webkit-mask-image: radial-gradient(ellipse 100% 90% at 50% 0%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 75%);
-  mask-image: radial-gradient(ellipse 100% 90% at 50% 0%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 100% 90% at 50% 0%,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 100% 90% at 50% 0%,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -30,18 +38,18 @@
   right: -120px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(200,240,78,0.09) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(200, 240, 78, 0.09) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
 
 :global([data-theme="light"]) .gridBg {
   background-image:
-    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
 }
 :global([data-theme="light"]) .glow {
-  background: radial-gradient(circle, rgba(90,138,0,0.07) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(90, 138, 0, 0.07) 0%, transparent 65%);
 }
 
 .inner {
@@ -50,13 +58,19 @@
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
-  padding-top: 48px;
+  padding-top: 88px;
 }
 
 /* Staggered fade-up entrance */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tag {
@@ -68,7 +82,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  border: 1px solid rgba(200,240,78,0.3);
+  border: 1px solid rgba(200, 240, 78, 0.3);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 40px;
@@ -93,8 +107,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(200,240,78,0.5); }
-  50% { box-shadow: 0 0 0 5px rgba(200,240,78,0); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 240, 78, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(200, 240, 78, 0);
+  }
 }
 
 .name {
@@ -160,13 +179,19 @@
   background: var(--accent);
   color: #0c0c0e;
 }
-.btnPrimary:hover { opacity: 0.85; transform: translateY(-1px); }
+.btnPrimary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
 
 .btnGhost {
   border: 1px solid var(--border);
   color: var(--muted);
 }
-.btnGhost:hover { border-color: var(--border-hover); color: var(--text); }
+.btnGhost:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
 
 .socials {
   display: flex;
@@ -186,11 +211,14 @@
   border-radius: 8px;
   border: 1px solid var(--border);
   color: var(--muted);
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
 }
 .socialLink:hover {
   color: var(--accent);
-  border-color: rgba(200,240,78,0.4);
+  border-color: rgba(200, 240, 78, 0.4);
   background: var(--accent-dim);
 }
 
@@ -216,11 +244,30 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 0 24px 72px; }
-  .inner { padding-top: 96px; }
-  .tag { margin-bottom: 28px; }
-  .name { margin-bottom: 28px; }
-  .summary { font-size: 1rem; margin-bottom: 36px; max-width: 100%; }
-  .btnPrimary, .btnGhost { width: 100%; justify-content: center; padding: 15px 24px; }
-  .scroll { margin-top: 48px; }
+  .hero {
+    padding: 0 24px 72px;
+  }
+  .inner {
+    padding-top: 96px;
+  }
+  .tag {
+    margin-bottom: 28px;
+  }
+  .name {
+    margin-bottom: 28px;
+  }
+  .summary {
+    font-size: 1rem;
+    margin-bottom: 36px;
+    max-width: 100%;
+  }
+  .btnPrimary,
+  .btnGhost {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 24px;
+  }
+  .scroll {
+    margin-top: 48px;
+  }
 }
